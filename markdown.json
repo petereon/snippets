@@ -1,0 +1,24 @@
+{
+	"Pomodoro": {
+		"prefix": "pomodoro",
+		"body": [
+			"## Pomodoro $1",
+			"",
+			"Driver: $2",
+			"Navigator: $3",
+			"",
+			"- $0"
+		],
+		"description": "Pomodoro"
+	},
+	"UAT": {
+		"prefix": "uat",
+		"body": [
+			"## UAT $1",
+			"Given $2  ",
+			"When $3  ",
+			"Then $4  ",
+		],
+		"description": "Pomodoro"
+	}
+}

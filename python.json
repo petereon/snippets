@@ -1,0 +1,40 @@
+{
+	"Empty pytest test": {
+		"prefix": ["pytest", "test", "ptt"],
+		"body": [
+			"def test_$1():",
+			"\tassert False"
+		],
+		"description": "Empty pytest test"
+	},
+	"Empty parametrized pytest test": {
+		"prefix": ["parametrized-pytest", "test-parametrized", "pptt"],
+		"body": [
+			"@pytest.mark.parametrize('$1',[])",
+			"def test_$2($1):",
+			"\tassert False"
+		],
+		"description": "Empty parametrized pytest test"
+	},
+
+	
+
+	"Empty pytest fixture": {
+		"prefix": ["raises-pytest", "pytest-raises", "ptr"],
+		"body": [
+			"with pytest.raises($1)$2:",
+			"\t"
+		],
+		"description": "Empty pytest fixture"
+	},
+
+	"Empty pytest describe": {
+		"prefix": ["describe-pytest", "pytest-describe", "ptd"],
+		"body": [
+			"def describe_$1():",
+			"\t$0"
+		],
+		"description": "Empty pytest describe"
+	},
+
+}
