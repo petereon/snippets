@@ -8,7 +8,7 @@
 		"description": "Empty pytest test"
 	},
 	"Empty parametrized pytest test": {
-		"prefix": ["parametrized-pytest", "test-parametrized", "pptt"],
+		"prefix": ["parametrized-pytest", "test-parametrized", "ptpt"],
 		"body": [
 			"@pytest.mark.parametrize('$1',[])",
 			"def test_$2($1):",
