@@ -1,6 +1,6 @@
 {
 	"Empty pytest test": {
-		"prefix": ["pytest", "test", "ptt"],
+		"prefix": ["pytest", "test", "pt"],
 		"body": [
 			"def test_$1():",
 			"\tassert False"
@@ -8,7 +8,7 @@
 		"description": "Empty pytest test"
 	},
 	"Empty parametrized pytest test": {
-		"prefix": ["parametrized-pytest", "test-parametrized", "ptpt"],
+		"prefix": ["parametrized-pytest", "test-parametrized", "ptp"],
 		"body": [
 			"@pytest.mark.parametrize('$1',[])",
 			"def test_$2($1):",
@@ -37,7 +37,15 @@
 		"description": "Empty pytest describe"
 	},
 
-	"Empty pytest given": {
+	"Necessary BDD imports": {
+		"prefix": ["bdd", "ptbdd"],
+		"body": [
+			"from pytest_bdd import given, when, then, parsers"
+		],
+		"description": "Empty pytest given"
+	},
+
+	"Empty BDD given": {
 		"prefix": ["given", "ptbg"],
 		"body": [
 			"@given('$1')",
@@ -47,7 +55,7 @@
 		"description": "Empty pytest given"
 	},
 
-	"Empty pytest when": {
+	"Empty BDD when": {
 		"prefix": ["when", "ptbw"],
 		"body": [
 			"@when('$1')",
@@ -57,10 +65,40 @@
 		"description": "Empty pytest when"
 	},
 
-	"Empty pytest then": {
+	"Empty BDD then": {
 		"prefix": ["then", "ptbt"],
 		"body": [
 			"@then('$1')",
+			"def test_$2():",
+			"\t$0"
+		],
+		"description": "Empty pytest then"
+	},
+
+	"Empty BDD given parsed": {
+		"prefix": ["given-parsed", "ptbgp"],
+		"body": [
+			"@given(parsers.parse('$1'))",
+			"def test_$2():",
+			"\t$0"
+		],
+		"description": "Empty pytest given"
+	},
+
+	"Empty BDD when parsed": {
+		"prefix": ["when-parsed", "ptbwp"],
+		"body": [
+			"@when(parsers.parse('$1'))",
+			"def test_$2():",
+			"\t$0"
+		],
+		"description": "Empty pytest when"
+	},
+
+	"Empty BDD then parsed": {
+		"prefix": ["then-parsed", "ptbtp"],
+		"body": [
+			"@then(parsers.parse('$1'))",
 			"def test_$2():",
 			"\t$0"
 		],
