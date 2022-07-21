@@ -37,4 +37,34 @@
 		"description": "Empty pytest describe"
 	},
 
+	"Empty pytest given": {
+		"prefix": ["given", "ptbg"],
+		"body": [
+			"@given('$1')",
+			"def test_$2():",
+			"\t$0"
+		],
+		"description": "Empty pytest given"
+	},
+
+	"Empty pytest when": {
+		"prefix": ["when", "ptbw"],
+		"body": [
+			"@when('$1')",
+			"def test_$2():",
+			"\t$0"
+		],
+		"description": "Empty pytest when"
+	},
+
+	"Empty pytest then": {
+		"prefix": ["then", "ptbt"],
+		"body": [
+			"@then('$1')",
+			"def test_$2():",
+			"\t$0"
+		],
+		"description": "Empty pytest then"
+	},
+
 }
